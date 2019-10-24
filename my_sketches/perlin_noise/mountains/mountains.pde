@@ -1,6 +1,6 @@
 void setup() {
   size(600,600);
-  background(230,250,255);
+  background(240,250,255);
   blendMode(SUBTRACT);
   
   for (int i = 0; i < 10; i++){
