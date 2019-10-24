@@ -16,7 +16,7 @@ void draw() {
       for (int j = 0; j < 10; j++) {
          float distance = dist(300,300, 75 + 50*i, 75  + 50 * j);
         noStroke();
-        fill(200-j*30, 40, 100-i*15);
+        fill(200-j*30, 40, 100-i*15   + 100*abs(sin(inp)));
         ellipse(75 + 50*i  + 10*sin(inp), 75  + 50 * j + 2*sin(inp*2.5), 25 - distance/30*sin(inp)*cos(distance) - 6*sin(inp*3 + i), 25 -  i*50/30*sin(inp)*cos(distance)*cos(inp*3 + j) );
         noFill();
         stroke(200-mouseX/100);
@@ -26,7 +26,6 @@ void draw() {
       }
   }
   inp += TWO_PI / 500;
-  
 }
 
 void keyPressed(){
@@ -35,3 +34,4 @@ void keyPressed(){
     saveFrame("screen-####.jpg");
     println("Done saving.");
   }
+}
