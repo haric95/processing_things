@@ -25,7 +25,7 @@ void draw() {
         
       }
   }
-  saveFrame("output/gol_####.png");
+  //saveFrame("output/gol_####.png");
   inp += TWO_PI / 250;
 }
 
